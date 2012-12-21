@@ -1,0 +1,290 @@
+(dp0
+S'XML'
+p1
+(dp2
+sS'Bacnet IP'
+p3
+(dp4
+S'Device Name'
+p5
+(dp6
+S'ANALOG INPUT 1'
+p7
+(S'0'
+p8
+S'1'
+p9
+tp10
+sS'BINARY VALUE 2'
+p11
+(S'5'
+p12
+S'2'
+p13
+tp14
+sS'BINARY VALUE 3'
+p15
+(g12
+S'3'
+p16
+tp17
+sS'BINARY VALUE 0'
+p18
+(g12
+S'0'
+p19
+tp20
+sS'BINARY VALUE 1'
+p21
+(g12
+S'1'
+p22
+tp23
+sS'BINARY VALUE 6'
+p24
+(g12
+S'6'
+p25
+tp26
+sS'BINARY VALUE 7'
+p27
+(g12
+S'7'
+p28
+tp29
+sS'BINARY VALUE 4'
+p30
+(g12
+S'4'
+p31
+tp32
+sS'BINARY VALUE 5'
+p33
+(g12
+S'5'
+p34
+tp35
+sS'ANALOG INPUT 2'
+p36
+(g8
+S'2'
+p37
+tp38
+sS'ANALOG INPUT 3'
+p39
+(g8
+S'3'
+p40
+tp41
+sS'ANALOG INPUT 0'
+p42
+(g8
+S'0'
+p43
+tp44
+sS'BINARY VALUE 9'
+p45
+(g12
+S'9'
+p46
+tp47
+sS'ANALOG OUTPUT 0'
+p48
+(S'1'
+p49
+S'0'
+p50
+tp51
+sS'ANALOG OUTPUT 1'
+p52
+(g49
+S'1'
+p53
+tp54
+sS'ANALOG OUTPUT 2'
+p55
+(g49
+S'2'
+p56
+tp57
+sS'ANALOG OUTPUT 3'
+p58
+(g49
+S'3'
+p59
+tp60
+sS'ANALOG VALUE 1'
+p61
+(S'2'
+p62
+S'1'
+p63
+tp64
+sS'ANALOG VALUE 0'
+p65
+(g62
+S'0'
+p66
+tp67
+sS'ANALOG VALUE 3'
+p68
+(g62
+S'3'
+p69
+tp70
+sS'ANALOG VALUE 2'
+p71
+(g62
+S'2'
+p72
+tp73
+sS'BINARY OUTPUT 1'
+p74
+(S'4'
+p75
+S'1'
+p76
+tp77
+sS'BINARY OUTPUT 0'
+p78
+(g75
+S'0'
+p79
+tp80
+sS'BINARY OUTPUT 3'
+p81
+(g75
+S'3'
+p82
+tp83
+sS'BINARY OUTPUT 2'
+p84
+(g75
+S'2'
+p85
+tp86
+sS'device_id'
+p87
+S'112'
+p88
+sS'BINARY INPUT 4'
+p89
+(S'3'
+p90
+S'4'
+p91
+tp92
+sS'BINARY INPUT 1'
+p93
+(g90
+S'1'
+p94
+tp95
+sS'BINARY INPUT 0'
+p96
+(g90
+S'0'
+p97
+tp98
+sS'BINARY INPUT 3'
+p99
+(g90
+S'3'
+p100
+tp101
+sS'BINARY INPUT 2'
+p102
+(g90
+S'2'
+p103
+tp104
+sS'BINARY VALUE 8'
+p105
+(g12
+S'8'
+p106
+tp107
+sssS'Modbus'
+p108
+(dp109
+sS'Simulate'
+p110
+(dp111
+sS'OPC'
+p112
+(dp113
+S'PC1'
+p114
+(dp115
+S'property'
+p116
+(dp117
+S'ip'
+p118
+S'localhost'
+p119
+sS'port'
+p120
+S'7777'
+p121
+ssssS'Local'
+p122
+(dp123
+S'MyBoolean'
+p124
+(dp125
+S'State3'
+p126
+(lp127
+sS'State2'
+p128
+(lp129
+sS'State1'
+p130
+(lp131
+ssS'System_'
+p132
+(dp133
+S'OS Name'
+p134
+(lp135
+sS'Nepo Version'
+p136
+(lp137
+sS'Server name'
+p138
+(lp139
+sS'Date'
+p140
+(lp141
+sS'Time'
+p142
+(lp143
+ssS'Item name'
+p144
+(lp145
+sS'Group2 '
+p146
+(dp147
+S'V1'
+p148
+(lp149
+sS'V2'
+p150
+(lp151
+ssS'Integer'
+p152
+(dp153
+S'Number4'
+p154
+(lp155
+sS'Number2'
+p156
+(lp157
+sS'Number3'
+p158
+(lp159
+sS'Number1'
+p160
+g155
+sss.

@@ -1,0 +1,224 @@
+(dp0
+S'Virtual_Dev_11'
+p1
+(dp2
+S'device_id'
+p3
+S'11'
+p4
+ssS'SimpleServer'
+p5
+(dp6
+S'BINARY VALUE 9'
+p7
+(S'5'
+p8
+S'9'
+p9
+tp10
+sS'BINARY VALUE 2'
+p11
+(g8
+S'2'
+p12
+tp13
+sS'BINARY VALUE 3'
+p14
+(g8
+S'3'
+p15
+tp16
+sS'BINARY VALUE 0'
+p17
+(g8
+S'0'
+p18
+tp19
+sS'BINARY VALUE 1'
+p20
+(g8
+S'1'
+p21
+tp22
+sS'BINARY VALUE 6'
+p23
+(g8
+S'6'
+p24
+tp25
+sS'BINARY VALUE 7'
+p26
+(g8
+S'7'
+p27
+tp28
+sS'BINARY VALUE 4'
+p29
+(g8
+S'4'
+p30
+tp31
+sS'BINARY VALUE 5'
+p32
+(g8
+S'5'
+p33
+tp34
+sS'ANALOG INPUT 2'
+p35
+(S'0'
+p36
+S'2'
+p37
+tp38
+sS'ANALOG INPUT 3'
+p39
+(g36
+S'3'
+p40
+tp41
+sS'ANALOG INPUT 0'
+p42
+(g36
+S'0'
+p43
+tp44
+sS'ANALOG INPUT 1'
+p45
+(g36
+S'1'
+p46
+tp47
+sS'BINARY VALUE 8'
+p48
+(g8
+S'8'
+p49
+tp50
+sS'ANALOG OUTPUT 0'
+p51
+(S'1'
+p52
+S'0'
+p53
+tp54
+sS'ANALOG OUTPUT 1'
+p55
+(g52
+S'1'
+p56
+tp57
+sS'ANALOG OUTPUT 2'
+p58
+(g52
+S'2'
+p59
+tp60
+sS'ANALOG OUTPUT 3'
+p61
+(g52
+S'3'
+p62
+tp63
+sS'ANALOG VALUE 1'
+p64
+(S'2'
+p65
+S'1'
+p66
+tp67
+sS'ANALOG VALUE 0'
+p68
+(g65
+S'0'
+p69
+tp70
+sS'ANALOG VALUE 3'
+p71
+(g65
+S'3'
+p72
+tp73
+sS'ANALOG VALUE 2'
+p74
+(g65
+S'2'
+p75
+tp76
+sS'BINARY OUTPUT 1'
+p77
+(S'4'
+p78
+S'1'
+p79
+tp80
+sS'BINARY OUTPUT 0'
+p81
+(g78
+S'0'
+p82
+tp83
+sS'BINARY OUTPUT 3'
+p84
+(g78
+S'3'
+p85
+tp86
+sS'BINARY OUTPUT 2'
+p87
+(g78
+S'2'
+p88
+tp89
+sS'device_id'
+p90
+S'112'
+p91
+sS'BINARY INPUT 1'
+p92
+(S'3'
+p93
+S'1'
+p94
+tp95
+sS'BINARY INPUT 0'
+p96
+(g93
+S'0'
+p97
+tp98
+sS'BINARY INPUT 3'
+p99
+(g93
+S'3'
+p100
+tp101
+sS'BINARY INPUT 2'
+p102
+(g93
+S'2'
+p103
+tp104
+sS'BINARY INPUT 4'
+p105
+(g93
+S'4'
+p106
+tp107
+ssS'sample server'
+p108
+(dp109
+S'analog input 2'
+p110
+(I1
+I2
+tp111
+sS'analog input 1'
+p112
+(I1
+I1
+tp113
+sS'device_id'
+p114
+I0
+ss.
