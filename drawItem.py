@@ -1206,6 +1206,7 @@ def on_button_press (item, target, event,canvas):
                         boxProperty['radius_y'] =  listBox.props.radius_y
                         print "radius copy ",boxProperty['radius_x']
                         print "Get position x %s y %s " % (boxProperty['x'],boxProperty['y'])
+                        
                         boxItem = createMoveBoxAlias(canvas,boxProperty,parent,listBox)
                         global_var.multiBoxMoveSelect.append(boxItem)
                         

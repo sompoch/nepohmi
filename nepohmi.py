@@ -24,7 +24,6 @@ import site
   02-07-2011 update file system , save ,save as , new and support *.xgd format 
              for svg format can support on next version of nepohmi[may be NepoHMI v 0.2 or later].
   10-07-2011 update group item , copy ,cut ,past item  
-  21-12-2012 Update project to http://github.com/sompoch/nepohmi
 '''
 
 import sys
@@ -689,9 +688,6 @@ def on_button_release_canvas(canvas, event,scrolled_win):
                             
                         else:
                             #TODO : Exit group on mouse click (edit mode)
-                        
-                            
-                            
                             root_edit,parent_edit = return_parent_root(global_var.parent_active)
                             if root_edit is not None:
                                 #global_var.edit_item_parent = root_edit#.get_parent()
@@ -1351,8 +1347,8 @@ def openGraphicFile(fileName):
             im.save('img_tmp',format)
             pixbuf = gtk.gdk.pixbuf_new_from_file ('img_tmp')
         else:    
-            im.save('/tmp/img_tmp',format)
-            pixbuf = gtk.gdk.pixbuf_new_from_file ('/tmp/img_tmp')
+            im.save('img_tmp',format)
+            pixbuf = gtk.gdk.pixbuf_new_from_file ('img_tmp')
 
         global_var.image_store[imgLoadNow]=[pixbuf,object[1][imgLoadNow][1]] # save pixbuf,type
     return Itemobject

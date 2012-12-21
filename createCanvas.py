@@ -401,8 +401,11 @@ class CreatGooCanvas(goocanvas.Canvas):
             #continuous 7-12-2010 
 
         if global_var.adj_box_press == True and global_var.outter == False :
-             # and global_var.mouse_over_item_adj == True:
+            # and global_var.mouse_over_item_adj == True:
+            
+            #print "%s %s %s %s" % (sx,sy,scale_,degree)
             #print 'drag adj begin...%s , %s ' % (global_var.itemSelectActive.props.x,global_var.itemSelectActive.props.y)
+            #print 'drag adj begin...%s , %s ' % (sx,sy)
             self.adj_item_size(event)
             global_var.move_adj_action = True
             print "to resize item"
@@ -418,6 +421,7 @@ class CreatGooCanvas(goocanvas.Canvas):
                 self.pointer_ungrab(global_var.select_cursor_move, event.time)
         '''    
         #print 'sel press %s and sel item %s ' %(global_var.sel_press,global_var.sel_item )
+        
         if global_var.sel_press == True and global_var.sel_item == False:
             read_scale = self.get_scale()
 
@@ -434,6 +438,7 @@ class CreatGooCanvas(goocanvas.Canvas):
             if w>0 and h>0:
                 #w =  event.x - self.pressx
                 #h =  event.y - self.pressy
+                
                 global_var.sel_area.props.width = w/read_scale
                 global_var.sel_area.props.height = h/read_scale
                 
@@ -476,10 +481,18 @@ class CreatGooCanvas(goocanvas.Canvas):
         select_item = prop_adj['itemParent']
         select_group = select_item.get_parent()
         if select_group is not None:
+            #Select group
+            sx,sy,scale_,degree = select_item.get_simple_transform()
+            '''
             x0 = select_item.props.x + select_group.props.x#global_var.itemSelectActive.props.x
             y0 = select_item.props.y + select_group.props.y#global_var.itemSelectActive.props.y
             w0 = select_item.props.x + select_item.props.width
-            h0 = select_item.props.y + select_item.props.height
+            h0 = select_item.props.y + select_item.props.height'''
+            
+            x0 = sx + select_group.props.x#global_var.itemSelectActive.props.x
+            y0 = sy + select_group.props.y#global_var.itemSelectActive.props.y
+            w0 = sx+ select_item.props.width
+            h0 = sy + select_item.props.height
             
             #print "event offset x = %s, y = %s and off_x = %s, off_y = %s " % (of_x,of_y,new_off_x,new_off_y)
             #new_off_x += select_group.props.x
@@ -487,10 +500,16 @@ class CreatGooCanvas(goocanvas.Canvas):
             
         else:
             #print "item ingrop resize 777"
-            x0 = select_item.props.x 
+            sx,sy,scale_,degree = select_item.get_simple_transform()
+            '''x0 = select_item.props.x 
             y0 = select_item.props.y 
             w0 = select_item.props.x + select_item.props.width
-            h0 = select_item.props.y + select_item.props.height
+            h0 = select_item.props.y + select_item.props.height'''
+            
+            x0 = sx
+            y0 = sy
+            w0 = sx + select_item.props.width
+            h0 = sy + select_item.props.height
             
             #new_off_x,new_off_y = self.offset_selection(event.x,event.y)
             
@@ -498,7 +517,7 @@ class CreatGooCanvas(goocanvas.Canvas):
         global_var.item_adj.props.x,global_var.item_adj.props.y  = self.offset_resize_in_group(adj_name,select_group,read_scale,event)
         #print "pos x %s , pos y %s " % (global_var.item_adj.props.x,global_var.item_adj.props.y)
         #When edit mode is True
-        
+        print "%s %s %s %s " % (x0,y0,w0,h0)
         
         if global_var.edit_group_mode == True:
             x0,y0 = global_var.edit_offset_xy
@@ -537,7 +556,7 @@ class CreatGooCanvas(goocanvas.Canvas):
             if height_new<0:
                 height_new =1
             select_item.props.height = height_new#/read_scale
-            select_item.props.y = global_var.item_adj.props.y# - 3
+            select_item.set_simple_transform(x0,global_var.item_adj.props.y,1,0)
             
         if adj_name == '4':
             #if read_scale == 2:
@@ -548,7 +567,8 @@ class CreatGooCanvas(goocanvas.Canvas):
             if width_new<0:
                 width_new =1
             select_item.props.width = width_new#/read_scale
-            select_item.props.x = (global_var.item_adj.props.x)#read_scale)# - 3
+            #select_item.props.x = (global_var.item_adj.props.x)#read_scale)# - 3
+            select_item.set_simple_transform(global_var.item_adj.props.x,y0,1,0)
             
         if adj_name == '1':
             height_new = h0-global_var.item_adj.props.y
@@ -558,10 +578,11 @@ class CreatGooCanvas(goocanvas.Canvas):
             if width_new<0:
                 width_new =1
                 
-            select_item.props.x = global_var.item_adj.props.x#+3
-            select_item.props.y = global_var.item_adj.props.y#+3
+            #select_item.props.x = global_var.item_adj.props.x#+3
+            #select_item.props.y = global_var.item_adj.props.y#+3
             select_item.props.width = width_new#/read_scale
             select_item.props.height = height_new#/read_scale
+            select_item.set_simple_transform(global_var.item_adj.props.x,global_var.item_adj.props.y,1,0)
             
         if adj_name == '3':
 
@@ -570,7 +591,8 @@ class CreatGooCanvas(goocanvas.Canvas):
             offset_y0 =0
             if select_group is not None:
                 offset_y0 = select_group.props.y
-                h0 = select_item.props.y+ select_item.props.height
+                #h0 = select_item.props.y+ select_item.props.height
+                h0 = sy+ select_item.props.height
                 height_new = h0-(global_var.item_adj.props.y)
                 #print "pos adj.y " ,global_var.item_adj.props.y
                 width_new = (global_var.item_adj.props.x)-x0 #select_group.props.x
@@ -584,8 +606,9 @@ class CreatGooCanvas(goocanvas.Canvas):
                 height_new =1
             select_item.props.height = height_new
             #select_item.props.height += offset_y0
-            c = global_var.item_adj.props.y# - offset_y0
-            select_item.props.y = c
+            '''c = global_var.item_adj.props.y# - offset_y0
+            select_item.props.y = c'''
+            select_item.set_simple_transform(sx,global_var.item_adj.props.y,1,0)
             
             
             if width_new<0:
@@ -597,7 +620,8 @@ class CreatGooCanvas(goocanvas.Canvas):
             if width_new<0:
                 width_new =1
             select_item.props.width = width_new#/read_scale
-            select_item.props.x = global_var.item_adj.props.x# - 3
+            #select_item.props.x = global_var.item_adj.props.x# - 3
+            select_item.set_simple_transform(global_var.item_adj.props.x,sy,1,0)
             
             height_new = (global_var.item_adj.props.y-y0)
             if height_new<0:
