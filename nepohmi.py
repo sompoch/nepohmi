@@ -24,6 +24,7 @@ import site
   02-07-2011 update file system , save ,save as , new and support *.xgd format 
              for svg format can support on next version of nepohmi[may be NepoHMI v 0.2 or later].
   10-07-2011 update group item , copy ,cut ,past item  
+  21-12-2012 Update project to http://github.com/sompoch/nepohmi
 '''
 
 import sys
