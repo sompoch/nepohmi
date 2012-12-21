@@ -1,4 +1,4 @@
-nepohmi pre alpha 0.0.1
+nepohmi pre-alpha 0.0.1
 =======
 
 The opensource svg graphic editor and dynamic for automation control. This is nepohmi_pre alpha and not convenient for end user.
